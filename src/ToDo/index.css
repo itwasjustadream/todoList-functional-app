@@ -12,10 +12,15 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
     margin: 0 auto 10px;
     margin-bottom: 10px;
-    max-width: 90%;
+    max-width: 30%;
+    cursor: pointer;
 }
 
-.todo-item >.name {
+.todo-item > input {
+    cursor: pointer;
+}
+
+.todo-item > .name {
     font-size: 12px;
     margin-left: 10px;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 
-const ToDoItem = ({ name, isChecked }) => {
+const ToDoItem = ({ idx, name, isChecked, toggleCheckedToDo }) => {
     return (
-        <div className='todo-item'>
+        <div className='todo-item' onClick={() => toggleCheckedToDo(idx)}>
             <input type='checkbox' checked={isChecked} />
             <span className='name'>{name}</span>
         </div>
