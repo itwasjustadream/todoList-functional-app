@@ -19,15 +19,17 @@ const ToDo = () => {
     const [name, setName] = useState('');
     return (
         <>
+            <h1>ToDo приложение</h1>
             {toDoBase.map(todo => (
-                <ToDoItem key={`_todo_${todo._id}`} todo={todo} />
+                <ToDoItem key={`_todo_${todo._id}`} name={todo.name} 
+                isChecked={todo.isChecked} />
             ))}
 
             <input 
                 type="text" 
                 value={name} 
                 onchange={e => setName(e.target.value)}
-                placeholder='Введите имя нового таска'
+                placeholder='Название..'
             />
         </>
     );
